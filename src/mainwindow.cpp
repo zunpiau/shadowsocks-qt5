@@ -294,6 +294,12 @@ void MainWindow::onShare()
 
 void MainWindow::onConnect()
 {
+    for(int i = 0; i < model->rowCount(); i++){
+        Connection *con = model->getItem(i)->getConnection();
+        if(con->isRunning()){
+            con->stop();
+        }
+    }
     int row = proxyModel->mapToSource(ui->connectionView->currentIndex()).row();
     Connection *con = model->getItem(row)->getConnection();
     if (con->isValid()) {
