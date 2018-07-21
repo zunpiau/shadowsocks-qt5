@@ -96,6 +96,7 @@
    <addaction name="actionConnect"/>
    <addaction name="actionDisconnect"/>
    <addaction name="actionTestLatency"/>
+   <addaction name="actionTestAllLatency"/>
    <addaction name="separator"/>
    <addaction name="actionEdit"/>
    <addaction name="actionDelete"/>
